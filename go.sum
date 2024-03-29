@@ -1,0 +1,11 @@
+github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
+github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/jessevdk/go-flags v1.4.0/go.mod h1:4FA24M0QyGHXBuZZK/XkWh8h0e1EYbRYJSGM75WSRxI=
+github.com/pkg6/go-lzfse v0.1.0 h1:tS3LZ2NoYHv7ooZRrAlfiKQ5EC3El+fIc3nEImpvPFY=
+github.com/pkg6/go-lzfse v0.1.0/go.mod h1:qjN8+8rGW6adPRcXb5aa3u72KpAyC+3gMXdeXAp4Vz0=
+github.com/pkg6/go-plist v0.1.0 h1:VcUsoyCwH2QK7wqebO1B8UXsLXGvH7P5kNhDR9v7Zo8=
+github.com/pkg6/go-plist v0.1.0/go.mod h1:4EtWwikgnW3EYU23/gdUOtJVmT9Gela6fK3532t+s+c=
+github.com/shogo82148/androidbinary v1.0.5 h1:7afvcNw+vT84R0ugrL/u/DIrGYylC66yNvt0Y0j7rrM=
+github.com/shogo82148/androidbinary v1.0.5/go.mod h1:FzpR5bLAXR3VsAUG4BRCFaUm0WV6YD4Ldu+m05tr9Vk=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v1 v1.0.0-20140924161607-9f9df34309c0/go.mod h1:WDnlLJ4WF5VGsH/HVa3CI79GS0ol3YnhVnKP89i0kNg=
