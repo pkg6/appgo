@@ -3,6 +3,8 @@ package appgo
 import (
 	"fmt"
 	"image"
+
+	"github.com/shogo82148/androidbinary/apk"
 )
 
 type APK struct {
