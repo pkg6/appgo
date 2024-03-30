@@ -1,4 +1,6 @@
 github.com/jessevdk/go-flags v1.4.0/go.mod h1:4FA24M0QyGHXBuZZK/XkWh8h0e1EYbRYJSGM75WSRxI=
+github.com/pkg6/go-lzfse v0.0.0-20240330030136-2d8f9d54f9da h1:xUokW0hLI/ILSc6Q0YHlrZBlfDs+1rDtMOWwR0NNgf0=
+github.com/pkg6/go-lzfse v0.0.0-20240330030136-2d8f9d54f9da/go.mod h1:qjN8+8rGW6adPRcXb5aa3u72KpAyC+3gMXdeXAp4Vz0=
 github.com/pkg6/go-plist v0.0.0-20240329135841-30c4eb2341fd h1:nYiFQUoT8IA0ID4BcPE+Vo/YEXyeh1J5Prm09D4V8Mw=
 github.com/pkg6/go-plist v0.0.0-20240329135841-30c4eb2341fd/go.mod h1:4EtWwikgnW3EYU23/gdUOtJVmT9Gela6fK3532t+s+c=
 github.com/shogo82148/androidbinary v1.0.5 h1:7afvcNw+vT84R0ugrL/u/DIrGYylC66yNvt0Y0j7rrM=

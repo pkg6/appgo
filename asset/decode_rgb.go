@@ -6,12 +6,13 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/pkg6/appgo/lzfse"
-	"github.com/pkg6/appgo/mreader"
 	"image"
 	"image/color"
 	"io"
 	"io/ioutil"
+
+	"github.com/pkg6/appgo/mreader"
+	"github.com/pkg6/go-lzfse"
 )
 
 // BGRA to RGBA
