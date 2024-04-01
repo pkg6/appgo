@@ -28,9 +28,9 @@ func APKParseFile(f *os.File) (*APK, error) {
 		return nil, err
 	}
 	defer buf.Close()
-	return APKParseReaderAt(buf, fi.Size())
+	return APKParseReader(buf, fi.Size())
 }
-func APKParseReaderAt(readerAt io.ReaderAt, size int64) (*APK, error) {
+func APKParseReader(readerAt io.ReaderAt, size int64) (*APK, error) {
 	pkg, err := apk.OpenZipReader(readerAt, size)
 	if err != nil {
 		return nil, err

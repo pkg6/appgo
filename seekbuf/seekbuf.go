@@ -9,6 +9,12 @@ import (
 	"sync"
 )
 
+type Reader interface {
+	io.Reader
+	io.ReaderAt
+	Size() int64
+}
+
 // Buffer type
 type Buffer struct {
 	reader io.Reader

@@ -29,7 +29,7 @@ type InfoPlist struct {
 }
 
 func (i *IPA) Name() string {
-	return Def(i.info.CFBundleDisplayName, i.info.CFBundleName, i.info.CFBundleExecutable)
+	return def(i.info.CFBundleDisplayName, i.info.CFBundleName, i.info.CFBundleExecutable)
 }
 
 func (i *IPA) Version() string {
@@ -56,8 +56,8 @@ func (i *IPA) Size() int64 {
 	return i.size
 }
 
-// Def get args until arg is not empty
-func Def(args ...string) string {
+// def get args until arg is not empty
+func def(args ...string) string {
 	for _, v := range args {
 		if v != "" {
 			return v

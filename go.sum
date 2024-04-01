@@ -1,3 +1,5 @@
+github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
+github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/jessevdk/go-flags v1.4.0/go.mod h1:4FA24M0QyGHXBuZZK/XkWh8h0e1EYbRYJSGM75WSRxI=
 github.com/pkg6/go-lzfse v0.1.0 h1:tS3LZ2NoYHv7ooZRrAlfiKQ5EC3El+fIc3nEImpvPFY=
 github.com/pkg6/go-lzfse v0.1.0/go.mod h1:qjN8+8rGW6adPRcXb5aa3u72KpAyC+3gMXdeXAp4Vz0=

@@ -49,10 +49,10 @@ func IPAParseFile(f *os.File) (*IPA, error) {
 		return nil, err
 	}
 	defer buf.Close()
-	return IPAParseReaderAt(buf, fi.Size())
+	return IPAParseReader(buf, fi.Size())
 }
 
-func IPAParseReaderAt(readerAt io.ReaderAt, size int64) (*IPA, error) {
+func IPAParseReader(readerAt io.ReaderAt, size int64) (*IPA, error) {
 	r, err := zip.NewReader(readerAt, size)
 	if err != nil {
 		return nil, err
