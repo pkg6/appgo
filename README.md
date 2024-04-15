@@ -9,6 +9,8 @@ The source code comes from a third-party project and is independently used to pa
 > AppParseFile
 >
 > AppParseReader
+>
+> AppParseMultipartFile
 
 ~~~
 package main
@@ -44,6 +46,8 @@ func main() {
 > APKParseFile
 >
 > APKParseReader
+>
+> APKParseMultipartFile
 
 ~~~
 package main
@@ -68,6 +72,8 @@ func main() {
 > IPAParseFile
 >
 > IPAParseReader
+>
+> IPAParseMultipartFile
 
 ~~~
 package main

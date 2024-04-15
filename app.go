@@ -1,44 +1,13 @@
 package appgo
 
 import (
+	"bytes"
 	"errors"
 	"github.com/pkg6/appgo/seekbuf"
 	"io"
+	"mime/multipart"
 	"os"
-	"path"
-	"strings"
 )
-
-const (
-	AppTypeIPA     = AppType(0)
-	AppTypeAPK     = AppType(1)
-	AppTypeUnknown = AppType(-1)
-)
-
-type AppType int
-
-func (t AppType) Name() string {
-	switch t {
-	case AppTypeIPA:
-		return "ipa.ipa"
-	case AppTypeAPK:
-		return "apk.apk"
-	default:
-		return "unknown"
-	}
-}
-
-func AppTypeFileName(filename string) AppType {
-	ext := strings.ToLower(path.Ext(filename))
-	switch ext {
-	case ".ipa":
-		return AppTypeIPA
-	case ".apk":
-		return AppTypeAPK
-	default:
-		return AppTypeUnknown
-	}
-}
 
 func AppParsePath(path string) (*AppInfo, error) {
 	var (
@@ -63,6 +32,18 @@ func AppParseFile(file *os.File) (*AppInfo, error) {
 	}
 	defer buf.Close()
 	return AppParseReader(buf, AppTypeFileName(file.Name()), fi.Size())
+}
+
+func AppParseMultipartFile(file multipart.File, appType AppType) (*AppInfo, error) {
+	var buf = new(bytes.Buffer)
+	if _, err := io.Copy(buf, file); err != nil {
+		return nil, err
+	}
+	sbuf, err := seekbuf.Open(buf, seekbuf.MemoryMode)
+	if err != nil {
+		return nil, err
+	}
+	return AppParseReader(sbuf, appType, int64(buf.Len()))
 }
 
 func AppParseReader(readerAt io.ReaderAt, appType AppType, size int64) (*AppInfo, error) {

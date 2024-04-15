@@ -2,6 +2,7 @@ package appgo
 
 import (
 	"archive/zip"
+	"bytes"
 	"errors"
 	"github.com/pkg6/appgo/asset"
 	"github.com/pkg6/appgo/ipapng"
@@ -10,6 +11,7 @@ import (
 	"image"
 	"image/png"
 	"io"
+	"mime/multipart"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -50,6 +52,18 @@ func IPAParseFile(f *os.File) (*IPA, error) {
 	}
 	defer buf.Close()
 	return IPAParseReader(buf, fi.Size())
+}
+
+func IPAParseMultipartFile(file multipart.File) (*IPA, error) {
+	var buf = new(bytes.Buffer)
+	if _, err := io.Copy(buf, file); err != nil {
+		return nil, err
+	}
+	sbuf, err := seekbuf.Open(buf, seekbuf.MemoryMode)
+	if err != nil {
+		return nil, err
+	}
+	return IPAParseReader(sbuf, int64(buf.Len()))
 }
 
 func IPAParseReader(readerAt io.ReaderAt, size int64) (*IPA, error) {
